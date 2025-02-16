@@ -1,11 +1,9 @@
 from typing import List
-
 from fastapi import FastAPI, Form
 from pydantic import BaseModel, computed_field, Field, ConfigDict, HttpUrl
 import uuid
 
 app = FastAPI()
-
 
 class Photo(BaseModel):
     url: HttpUrl
