@@ -29,7 +29,8 @@ class Jedi(BaseModel):
     id: str = Field(default_factory=lambda: f"schorle-{uuid.uuid4()}", exclude=True)
     name: str
     home_world: str
-    model_config = ConfigDict(json_schema_extra={
+    model_config = ConfigDict(
+        json_schema_extra={
             "example": {
                 "name": "Luke Skywalker",
                 "home_world": "Tatooine"
